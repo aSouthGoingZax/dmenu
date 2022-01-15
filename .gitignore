@@ -1,0 +1,10 @@
+*~*
+*.tar.*
+*.tgz
+*.o
+*.out
+*.bak
+*.tmp
+*.temp
+*.rej
+*.orig
