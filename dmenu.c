@@ -660,15 +660,8 @@ setup(int z)
 	int a, di, n, area = 0;
 #endif
 	/* init appearance */
-    if (z == 0) {
-        for (j = 0; j < SchemeLast; j++) {
-            scheme[j] = drw_scm_create(drw, colors[j], alphas[SchemeNorm], 2);
-        }
-    } else {
-        for (j = 0; j < SchemeLast; j++) {
-            scheme[j] = drw_scm_create(drw, colors[j], alphas[SchemeOpaque], 2);
-        }
-    }
+	for (j = 0; j < SchemeLast; j++)
+		scheme[j] = drw_scm_create(drw, colors[j], alphas[(z ? SchemeOpaque : SchemeNorm)], 2);
 
 	clip = XInternAtom(dpy, "CLIPBOARD",   False);
 	utf8 = XInternAtom(dpy, "UTF8_STRING", False);

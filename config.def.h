@@ -8,7 +8,6 @@ static const char *fonts[] = { "sans-serif:size=14" };    // -fn option; overrid
 static const char *prompt = NULL;                         // -p option; prompt to the left of input field
 static const char *colors[SchemeLast][2] = {
 	/*                         fg         bg      */
-	/* night owl */
 	[SchemeNorm]          = { "#d6deeb", "#011627" },
 	[SchemeSel]           = { "#011627", "#82aaff" },
 	[SchemeOut]           = { "#22da6e", "#011627" },     // the prompt uses this scheme
